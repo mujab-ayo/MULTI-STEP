@@ -28,36 +28,61 @@
   <body class="h-screen bg-lightBlue">
     <div class="relative h-full">
       <div
-        class="absolute w-10/11 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 justify-between p-2 bg-white rounded-md grid grid-cols-3 "
+        class="absolute h-3/5 w-10/11 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 justify-between p-2 bg-white rounded-md grid grid-cols-3 gap-4"
       >
         <!-- Sidebar start -->
-        <aside class="bg-[url('/assets/images/bg-sidebar-desktop.svg')] bg-cover p-4 flex flex-col justify-start text-white">
-          <div class="step flex justify-center items-center">
-            <span class="step-num border-2 h-6 w-6 border-white flex justify-center  p-1 box-border rounded-full text-xs font-medium ">1</span>
-            <div class=" ml-2">
-              <span class="step-info text-xs text-lightGray font-bold ">Step 1</span>
+        <aside
+          class="bg-[url('/assets/images/bg-sidebar-desktop.svg')] col-span-1 bg-cover bg-center p-4 flex flex-col rounded-md justify-start text-white"
+        >
+          <div class="step flex justify-start items-center">
+            <span
+              class="step-num border-2 h-6 w-6 border-white flex justify-center p-1 box-border rounded-full text-xs font-medium"
+              >1</span
+            >
+            <div class="ml-2">
+              <span class="step-info text-xs text-coolGray font-bold"
+                >Step 1</span
+              >
               <h3 class="text-xs font-semibold">Your info</h3>
             </div>
           </div>
-          <div class="step">
-            <span class="step-num">2</span>
-            <div class="">
-              <span class="step-info">Step 2</span>
-              <h3>Select plan</h3>
+
+          <div class="step flex justify-start items-center">
+            <span
+              class="step-num border-2 h-6 w-6 border-white flex justify-center p-1 box-border rounded-full text-xs font-medium"
+              >2</span
+            >
+            <div class="ml-2">
+              <span class="step-info text-xs text-coolGray font-bold"
+                >Step 2</span
+              >
+              <h3 class="text-xs font-semibold">Select plan</h3>
             </div>
           </div>
-          <div class="step">
-            <span class="step-num">3</span>
-            <div class="">
-              <span class="step-info">Step 3</span>
-              <h3>Add-ons</h3>
+
+          <div class="step flex justify-start items-center">
+            <span
+              class="step-num border-2 h-6 w-6 border-white flex justify-center p-1 box-border rounded-full text-xs font-medium"
+              >3</span
+            >
+            <div class="ml-2">
+              <span class="step-info text-xs text-coolGray font-bold"
+                >Step 3</span
+              >
+              <h3 class="text-xs font-semibold">Add-ons</h3>
             </div>
           </div>
-          <div class="step">
-            <span class="step-num">4</span>
-            <div class="">
-              <span class="step-info">Step 4</span>
-              <h3>Summary</h3>
+
+          <div class="step flex justify-start items-center">
+            <span
+              class="step-num border-2 h-6 w-6 border-white flex justify-center p-1 box-border rounded-full text-xs font-medium"
+              >4</span
+            >
+            <div class="ml-2">
+              <span class="step-info text-xs text-coolGray font-bold"
+                >Step 4</span
+              >
+              <h3 class="text-xs font-semibold">Summary</h3>
             </div>
           </div>
         </aside>
@@ -65,158 +90,209 @@
 
         <!-- Step 1 start -->
 
-        <article>
-          <header>
-            <h2>Personal info</h2>
-            <p>Please provide your name, email address, and phone number.</p>
+        <article class="article_style hidden">
+          <header class="mb-2">
+            <h2 class="text-marineBlue text-3xl font-bold">Personal info</h2>
+            <p class="text-coolGray font-semibol text-xs">
+              Please provide your name, email address, and phone number.
+            </p>
           </header>
-          <form>
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="e.g. Stephen King" />
+          <form class="flex flex-col">
+            <label for="name" class="font-bold text-marineBlue text-sm"
+              >Name</label
+            >
+            <input
+              type="text"
+              id="name"
+              class="border-2 mb-4 border-lightGray p-1 rounded-md focus:border-pastelBlue outline-none"
+              placeholder="e.g. Stephen King"
+            />
 
-            <label for="email">Email Address</label>
+            <label for="email" class="font-bold text-marineBlue text-sm"
+              >Email Address</label
+            >
             <input
               type="text"
               id="email"
+              class="border-2 mb-4 border-lightGray p-1 rounded-md focus:border-pastelBlue outline-none"
               placeholder="e.g. stephenking@lorem.com"
             />
 
-            <label for="phone">Phone Number</label>
-            <input type="text" id="phone" placeholder="e.g. +1 234 567 890" />
+            <label for="phone" class="font-bold text-marineBlue text-sm"
+              >Phone Number</label
+            >
+            <input
+              type="text"
+              id="phone"
+              placeholder="e.g. +1 234 567 890"
+              class="border-2 mb-4 border-lightGray p-1 rounded-md focus:border-pastelBlue outline-none"
+            />
           </form>
-          <button>Next Step</button>
+          <button class="place-self-end mt-auto marine-btn">Next Step</button>
         </article>
 
         <!-- Step 1 end -->
 
         <!-- Step 2 start -->
 
-        <article class="hidden">
-          <header>
-            <h2>Select your plan</h2>
-            <p>You have the option of monthly or yearly billing.</p>
+        <article class="hidden article_style">
+          <header class="mb-4">
+            <h2 class="text-marineBlue text-3xl font-bold">Select your plan</h2>
+            <p class="text-coolGray font-semibol text-xs">
+              You have the option of monthly or yearly billing.
+            </p>
           </header>
-          <div>
-            <article>
+          <div class="grid grid-cols-3 gap-4">
+            <article
+              class="p-2 border-2 border-lightGray rounded-md flex-col justify-start space-y-4 h-28"
+            >
               <img src="./assets/images/icon-arcade.svg" alt="" />
               <div>
-                <h5>Arcade</h5>
-                <p>$9/mo</p>
+                <h5 class="text-marineBlue text-sm font-bold">Arcade</h5>
+                <p class="text-coolGray font-semibol text-sm">$9/mo</p>
               </div>
             </article>
 
-            <article>
-              <img src="./assets/images/icon-arcade.svg" alt="" />
+            <article
+              class="p-2 border-2 border-lightGray rounded-md flex-col justify-start space-y-4 h-28"
+            >
+              <img src="./assets/images/icon-advanced.svg" alt="" />
               <div>
-                <h5>Advanced</h5>
-                <p>$12/mo</p>
+                <h5 class="text-marineBlue text-sm font-bold">Advanced</h5>
+                <p class="text-coolGray font-semibol text-sm">$12/mo</p>
               </div>
             </article>
 
-            <article>
-              <img src="./assets/images/icon-arcade.svg" alt="" />
+            <article
+              class="p-2 border-2 border-lightGray rounded-md flex-col justify-start space-y-4 h-28"
+            >
+              <img src="./assets/images/icon-pro.svg" alt="" />
               <div>
-                <h5>Pro</h5>
-                <p>$15/mo</p>
+                <h5 class="text-marineBlue teext-sm font-bold">Pro</h5>
+                <p class="text-coolGray font-semibol text-sm">$15/mo</p>
               </div>
             </article>
           </div>
-          <div class="duration">
-            <span>Monthly</span>
-            <input type="checkbox" name="" id="" />
-            <span>Yearly</span>
+          <div
+            class="duration w-full bg-magnolia mt-4 p-2 flex justify-center rounded-lg"
+          >
+            <span class="font-semibold text-sm text-marineBlue">Monthly</span>
+            <input type="checkbox" class="mx-4" name="" id="" />
+            <span class="font-semibold text-sm text-marineBlue">Yearly</span>
           </div>
-          <div>
-            <button>Go Back</button>
-            <button>Next</button>
+          <div class="flex mt-auto justify-between place-items-end">
+            <button class="p-2 rounded-md text-coolGray font-bold text-sm">
+              Go Back
+            </button>
+            <button class="marine-btn">Next</button>
           </div>
         </article>
         <!-- Step 2 end -->
 
         <!-- Step 3 start -->
 
-        <article class="hidden">
-          <header>
-            <h2>Pick add-ons</h2>
-            <p>Add-ons help enhance your gaming experience.</p>
+        <article class="hidden article_style">
+          <header class="mb-4">
+            <h2 class="text-marineBlue text-3xl font-bold">Pick add-ons</h2>
+            <p class="text-coolGray font-semibol text-xs">
+              Add-ons help enhance your gaming experience.
+            </p>
           </header>
-          <article>
-            <div>
-              <input type="checkbox" name="" id="" />
-              <div>
-                <h5>Online service</h5>
-                <p>Access to multiplayer games</p>
+          <article class="flex flex-col gap-2">
+            <div
+              class="flex justify-between items-center border-2 border-lightGray rounded-md p-2"
+            >
+              <div class="flex">
+                <input type="checkbox" class="mr-1" name="" id="" />
+                <div>
+                  <h2 class="text-marineBlue text-sm font-bold">Online service</h5>
+                  <p class="text-coolGray font-semibol text-xs">Access to multiplayer games</p>
+                </div>
               </div>
               <span>+$10/mo</span>
             </div>
 
-            <div>
-              <input type="checkbox" name="" id="" />
-              <div>
-                <h5>Larger storage</h5>
-                <p>Extra 1TB of cloud save</p>
+            <div
+              class="flex justify-between items-center border-2 border-lightGray rounded-md p-2"
+            >
+              <div class="flex">
+                <input type="checkbox" class="mr-1" name="" id="" />
+                <div>
+                  <h2 class="text-marineBlue text-sm font-bold">Larger storage</h5>
+                  <p class="text-coolGray font-semibol text-xs">Extra 1TB of cloud save</p>
+                </div>
               </div>
               <span>+$2/mo</span>
             </div>
 
-            <div>
-              <input type="checkbox" name="" id="" />
-              <div>
-                <h5>Customizable Profile</h5>
-                <p>Custom theme on your profile +$2/mo Go Back Next Step</p>
+            <div
+              class="flex justify-between items-center border-2 border-lightGray rounded-md p-2"
+            >
+              <div class="flex">
+                <input type="checkbox" class="mr-1" name="" id="" />
+                <div>
+                  <h2 class="text-marineBlue text-sm font-bold">Customizable Profile</h5>
+                  <p class="text-coolGray font-semibol text-xs">Custom theme on your profile</p>
+                </div>
               </div>
               <span>+$2/mo</span>
             </div>
           </article>
-          <div>
-            <button>Go Back</button>
-            <button>Next</button>
+          <div class="flex mt-auto justify-between place-items-end">
+            <button class="p-2 rounded-md text-coolGray font-bold text-sm">
+              Go Back
+            </button>
+            <button class="marine-btn">Next</button>
           </div>
         </article>
         <!-- Step 3 end -->
 
         <!-- Step 4 start -->
 
-        <article class="hidden">
-          <header>
-            <h2>Finishing up</h2>
-            <p>Double-check everything looks OK before confirming.</p>
+        <article class="hidden article_style">
+          <header class="mb-2">
+            <h2 class="text-marineBlue text-3xl font-bold">Finishing up</h2>
+            <p class="text-coolGray font-semibol text-xs">
+              Double-check everything looks OK before confirming.
+            </p>
           </header>
           <article>
-            <div>
-              <div>
-                <div>
-                  <h5>Arcade (Yearly)</h5>
-                  <a href="#">Change</a>
+            <div class="bg-alabaster p-4">
+              <div class="flex justify-between items-center p-2 border-b border-lightGray">
+                <div class="flex flex-col">
+                  <h5 class="text-marineBlue text-sm font-bold">Arcade (Yearly)</h5>
+                  <a href="#" class="text-coolGray font-semibol text-xs underline">Change</a>
                 </div>
-                <span>$90/yr</span>
+                <span class="text-marineBlue text-xs font-bold">$90/yr</span>
               </div>
-              <div>
-                <span>Online service</span>
-                <span>+$10/yr</span>
+              <div class="flex justify-between items-center py-2">
+                <span class="text-coolGray font-semibol text-sm">Online service</span>
+                <span class="text-marineBlue text-xs ">+$10/yr</span>
               </div>
-              <div>
-                <span>Large storage</span>
-                <span>+$20/yr</span>
+              <div class="flex justify-between items-center py-2">
+                <span class="text-coolGray font-semibol text-sm">Large storage</span>
+                <span class="text-marineBlue text-xs ">+$20/yr</span>
               </div>
             </div>
-            <div>
-              <span>Total (per year)</span>
-              <span>+$120/yr</span>
+            <div class="flex justify-between items-center p-4 py-2">
+              <span class="text-coolGray font-semibol text-sm">Total (per year)</span>
+              <span class="text-purplishBlue text-lg font-semibold">+$120/yr</span>
             </div>
           </article>
-          <div>
-            <button>Go Back</button>
-            <button>Confirm</button>
+          <div class="flex mt-auto justify-between place-items-end">
+            <button class="p-2 rounded-md text-coolGray font-bold text-sm">
+              Go Back
+            </button>
+            <button class="bg-purplishBlue px-4 py-2 rounded-md text-lightGray font-bold text-sm">Confirm</button>
           </div>
         </article>
         <!-- Step 4 end -->
 
         <!-- Step 5 start -->
-        <article class="hidden">
-          <img src="./assets/images/icon-thank-you.svg" alt="" />
-          <h2>Thank you!</h2>
-          <p>
+        <article class="flex article_style justify-center gap-3 items-center">
+          <img src="./assets/images/icon-thank-you.svg" class="h-20 w-20 self-center" alt="" />
+          <h2 class="text-marineBlue text-3xl font-bold">Thank you!</h2>
+          <p class="text-coolGray font-semibol text-sm text-center">
             Thanks for confirming your subscription! We hope you have fun using
             our platform. If you ever need support, please feel free to email us
             at support@loremgaming.com.
@@ -226,11 +302,5 @@
       </div>
     </div>
 
-    <!-- <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div> -->
   </body>
 </html>

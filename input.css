@@ -25,3 +25,11 @@
 *{
     @apply font-ubuntu
 }
+
+.article_style {
+   @apply flex-col mx-auto p-4 w-full col-span-2
+}
+
+.marine-btn{
+    @apply bg-marineBlue px-4 py-2 rounded-md text-lightGray font-bold text-sm
+}
